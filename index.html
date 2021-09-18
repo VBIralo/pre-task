@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register Form</title>
+
+  <link rel="stylesheet" href="style.css" type="text/css" />
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="signup">
+      <div class="app-title">
+        <h1>Sign Up</h1>
+      </div>
+
+      <div class="signup-form">
+        <form class="signup" id="signup-form">
+          <div class="input-field">
+            <input type="text" class="signup-field" value="" placeholder="Your Name" id="signup-name" name="first_name"
+              autofocus required>
+          </div>
+          <div class="input-field">
+            <input type="email" class="signup-field" value="" placeholder="Email" id="signup-email" name="email"
+              required>
+          </div>
+          <div class="input-field">
+            <input type="password" class="signup-field" value="" placeholder="Password" id="signup-password" name="pass"
+              required>
+          </div>
+          <div class="input-btn">
+            <a class="submit-btn" onclick="return validateForm()" href="#">Sign Up</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
