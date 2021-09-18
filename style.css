@@ -1,3 +1,23 @@
+:root {
+  --bg-color: #007ac0;
+  --form-bg-color: #fff;
+  --app-title-color: #000;
+  --input-bg-color: #f0f0f0;
+  --input-color: #757575;
+  --sbm-color: #007ac0;
+  --sbm-color-hover: rgb(0, 90, 143);
+}
+
+:root[theme='dark'] {
+  --bg-color: #0d0d0d;
+  --form-bg-color: #19191a;
+  --app-title-color: #fff;
+  --input-bg-color: #232324;
+  --input-color: #ffffff;
+  --sbm-color: #454647;
+  --sbm-color-hover: #2c2c2c;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -8,12 +28,13 @@
 
 body {
   min-height: 100%;
-  background-color: rgb(0, 122, 192);
-  color: #000;
+  background-color: var(--bg-color);
+  color: var(--app-title-color);
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: system-ui;
+  transition: 0.3s;
 }
 
 .container {
@@ -23,7 +44,7 @@ body {
 }
 
 .signup {
-  background-color: #FFF;
+  background-color: var(--form-bg-color);
   padding: 20px;
   border-radius: 5px
 }
@@ -42,31 +63,49 @@ body {
 
 input {
   text-align: center;
-  background-color: #f0f0f0;
+  background-color: var(--input-bg-color);
+  color: var(--input-color);
   border: 2px solid transparent;
   border-radius: 3px;
   padding: 10px 0;
   width: 100%;
   font-size: 12pt;
-  transition: ease-in .1s;
 }
 
 input:focus {
-  border: 2px solid rgb(0, 122, 192);
+  border: 2px solid var(--bg-color);
 }
 
 .submit-btn {
-  background: rgb(0, 122, 192);
+  background: var(--sbm-color);
   color: #ffffff;
   padding: 10px 0;
   text-decoration: none;
   border-radius: 3px;
   box-shadow: none;
-  transition: 0.3s;
   display: block;
   width: 100%;
 }
 
 .submit-btn:hover {
-  background: rgb(0, 90, 143);
+  background: var(--sbm-color-hover);
+}
+
+.theme-btn {
+  background-color: var(--form-bg-color);
+  border-radius: 12px 0 0 12px;
+  justify-content: center;
+  position: fixed;
+  top: 80%;
+  right: 0px;
+  padding: 3px 8px;
+  width: 70px;
+  height: 50px;
+  z-index: 999;
+}
+
+svg {
+  color: var(--input-color);
+  width: 45px;
+  height: 45px;
 }

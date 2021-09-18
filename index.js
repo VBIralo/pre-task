@@ -44,3 +44,15 @@ function validateForm() {
     return alert('The user name must contain only alphabet letters.')
   }
 }
+
+function switchTheme() {
+  if (document.documentElement.hasAttribute('theme')) {
+    document.documentElement.removeAttribute('theme');
+    document.getElementById('svg-sun').setAttribute('style', 'display: none;');
+    document.getElementById('svg-moon').setAttribute('style', 'display: block;');
+  } else {
+    document.getElementById('svg-sun').setAttribute('style', 'display: block;');
+    document.getElementById('svg-moon').setAttribute('style', 'display: none;');
+    document.documentElement.setAttribute('theme', 'dark');
+  }
+}
