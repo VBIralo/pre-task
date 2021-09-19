@@ -13,7 +13,7 @@ function sendForm(data) {
     })
     .catch(error => {
       console.error(error);
-      return alert('An error has occurred. The form hasn\'t been sent.\n\n' + error)
+      return alert('An error has occurred! The API isn\'t configured yet... The form hasn\'t been sent.\n\n' + error)
     })
 }
 
@@ -41,7 +41,7 @@ function validateForm() {
       return alert('You have entered an invalid email address!')
     }
   } else {
-    return alert('The user name must contain only alphabet letters.')
+    return alert('The user name must contain only alphabet letters without spaces.')
   }
 }
 
